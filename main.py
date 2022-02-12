@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import datetime
 
+
 def draw_squares(screen_width: int = 156, 
                  square_size: int = 3, 
                  outline_size: int = 1, 
@@ -32,10 +33,12 @@ def draw_squares(screen_width: int = 156,
     
     print('*' * screen_width)
 
+
 def squares_count(to_date: str) -> int:
     to_date_date = datetime.datetime.strptime(to_date, '%Y-%m-%d')
     delta = to_date_date - datetime.datetime.today()
     return delta.days
+
 
 count = squares_count('2022-09-22')    
 draw_squares(count)    
